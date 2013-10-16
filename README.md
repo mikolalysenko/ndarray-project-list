@@ -21,6 +21,7 @@ Similar to cwise, would be nice if we could use code generation to get fast gene
 
 A common pattern with ndarrays is to use lazy just-in-time code generation that generates an optimized routine based on pattern matching types.  It would be nice if we could encode this somehow into JavaScript using some sort of meta language/module so that it would be easier to explain and modify these sorts of routines.  More work would be necessary to figure out how this could be done though
 
+### Debugging tools
 
 
 # Linear algebra tools
@@ -29,9 +30,20 @@ Currently little progress in this area so far.  If someone wants to take up the 
 
 ### Matrix-vector multiply
 
+* Should take into account striding, use JIT code generation
+
+* Sparse products should be blazing fast, need to figure out the best solution for how to handle this.
+
 ### Matrix-matrix product
 
+* Same deal as above.  For tricky non-aligned case use divide-and-conquer.
+
+* Question:  Is Strassen-type iteration worth it?
+
+* Question:  Should sparse matrix products be supported?
+
 ### Matrix inverse
+
 
 ### Solvers (sparse and dense)
 
@@ -41,11 +53,15 @@ Currently little progress in this area so far.  If someone wants to take up the 
 
 ### Eigendecomposition (sparse and dense)
 
+* Sparse stuff should be done with Lanczos algorithm/arnoldi method
+
 ### SVD (sparse and dense)
+
+### Psuedoinverse
 
 ### Matrix logarithms and exponents
 
-(Maybe not necessary to use ndarrays here)
+* Maybe not necessary to use ndarrays here
 
 ### Other factorizations
 
