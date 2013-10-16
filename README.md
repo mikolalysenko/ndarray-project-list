@@ -73,6 +73,34 @@ Currently little progress in this area so far.  If someone wants to take up the 
 
 Possibly using emscripten
 
+# Optimization
+
+## Convex
+
+### Linear programming solver
+
+### Quadratic programming solver
+
+### Network flow
+
+### Minimum cut
+
+## Nonconvex
+
+### Bindings to native libraries
+
+* CPLEX
+* CERES
+* UMFPACK
+* ..?
+
+### BFGS
+
+### Nelder-Mead
+
+### Quasi-Newton
+
+
 
 # Graphics
 
