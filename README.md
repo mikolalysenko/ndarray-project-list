@@ -23,6 +23,7 @@ A common pattern with ndarrays is to use lazy just-in-time code generation that 
 
 ### Debugging tools
 
+Might be nice to have inspectors/logging tools for investigating ndarrays.  Maybe have some options for bounds checking that can be turned on.
 
 # Linear algebra tools
 
@@ -44,10 +45,17 @@ Currently little progress in this area so far.  If someone wants to take up the 
 
 ### Matrix inverse
 
+* Dense version is kind of easy
 
-### Solvers (sparse and dense)
+* Sparse is pretty hard, could try to port some native code with emscripten
+
+### Iterative solvers (sparse and dense)
+
+* Mainly useful with sparse matrices, already have some arly work
 
 ### Linear least squares
+
+* Again, pretty straightforward.  Same concept as above
 
 ### Condition number
 
@@ -57,7 +65,13 @@ Currently little progress in this area so far.  If someone wants to take up the 
 
 ### SVD (sparse and dense)
 
+* Dense somewhat easy
+
+* Sparse requires hard work
+
 ### Psuedoinverse
+
+* Should be easy given svd, maybe don't even need separate module
 
 ### Matrix logarithms and exponents
 
@@ -79,11 +93,19 @@ Possibly using emscripten
 
 ### Linear programming solver
 
+* Must have, could probably implement a couple of different algorithms
+
 ### Quadratic programming solver
+
+* Also must have.  The current quadprog on npm works, but is a kind of crappy port of some R code and is very slow.  A better version is clearly needed.
 
 ### Network flow
 
+* Could try out a couple of methods, bfs, push-relabel, etc.
+
 ### Minimum cut
+
+* Side effect of network flow
 
 ## Nonconvex
 
@@ -101,14 +123,15 @@ Possibly using emscripten
 ### Quasi-Newton
 
 
-
 # Graphics
 
 ### ndarray optimized isosurface extractor
 
-Can use dual contouring/surface nets.  Should work for arbitrary dimensions
+Can use dual contouring/surface nets.  Should work for arbitrary dimensions.  This is already mostly there, but will take a bit more work to get it to work on general ndarrays.  Would also be nice to exploit sparsity when possible.
 
 ### Better volume rendering tools
+
+Have raymarch, but it needs a lot more work.  Should also try to figure out how to make this more modular.
 
 ### Curve/surface rasterization
 
@@ -124,6 +147,7 @@ Maybe connect with d3.js somehow?
 
 ### Headless/node only plotting
 
+* Maybe pipe plots to streams or render to ndarrays?
 
 # Data formats and interoperability
 
