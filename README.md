@@ -1,7 +1,9 @@
 ndarray-project-list
 ====================
-This is a high level list of projects involving ndarrays that still need to get done organized by topics
+This is a high level list of projects involving ndarrays that still need to get done organized by topics.  For an overview of what is currently available check out:
 
+* [ndarray](https://github.com/mikolalysenko/ndarray)
+* [ndarray-tutorial](https://github.com/mikolalysenko/ndarray-tutorial)
 
 # Core functionality
 
@@ -163,5 +165,13 @@ Maybe connect with d3.js somehow?
 
 * Minecraft schematics
 * ...?
+
+# Documentation/outreach
+
+### More tutorials
+
+### Conference talks
+
+### Demos
 
 # Your project here
